@@ -1,0 +1,5 @@
+.DS_Store
+data/accounts.json
+*.exe
+*.test
+*.out
