@@ -1,0 +1,198 @@
+/* ===== Base school page ===== */
+.school-page {
+    background: #0c1930;
+    color: #fff;
+}
+
+.school-page-main {
+    padding: 40px 7% 56px;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.page-intro {
+    margin-bottom: 28px;
+}
+
+.page-intro .eyebrow {
+    color: #f8c985;
+}
+
+.page-intro h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.25;
+    margin-top: 12px;
+    letter-spacing: -0.6px;
+}
+
+.school-page-main p {
+    font-size: 1rem;
+    line-height: 1.85;
+    color: #d7e1f1;
+}
+
+.page-lead {
+    max-width: 760px;
+    margin-bottom: 32px;
+}
+
+.school-page-main h2 {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    margin-bottom: 14px;
+}
+
+.page-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin: 28px 0;
+}
+
+.info-panel {
+    background: #152b50;
+    padding: 28px;
+    border: 1px solid #ffffff24;
+    border-radius: 12px;
+    min-width: 0;
+}
+
+.page-link {
+    display: inline-block;
+    color: #f8c985;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-top: 20px;
+}
+
+.page-link:hover {
+    text-decoration: underline;
+}
+
+
+.page-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: #0c1930;
+    color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.page-cta h2 {
+    margin: 0;
+}
+
+.page-cta .page-link {
+    background: var(--accent);
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin: 0;
+}
+
+
+.two-columns {
+    grid-template-columns: 1fr 1fr;
+}
+
+.school-page-footer {
+    text-align: center;
+    background: #0c1930;
+    color: #aebed5;
+    padding: 24px;
+    font-size: 0.85rem;
+}
+
+.school-page :focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 4px;
+}
+
+@media (max-width: 850px) {
+    .page-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .page-cta {
+        align-items: start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 540px) {
+    .school-page-main {
+        padding: 28px 5% 40px;
+    }
+
+    .info-panel,
+    .notice-empty {
+        padding: 22px;
+    }
+}
+
+/* ===== Color overrides ===== */
+.school-page-main h2 {
+    color: #f8c985;
+}
+
+.page-intro h1 {
+    color: #fff;
+}
+
+.page-cta {
+    background: #152b50;
+    border: 1px solid #ffffff24;
+}
+
+.page-cta .page-link:hover {
+    background: #bd321d;
+}
+
+.school-page-footer {
+    border-top: 1px solid #ffffff24;
+}
+
+.contact-value:hover {
+    color: #f8c985;
+}
+
+.school-page .shared-page-header {
+    background: #0c1930;
+}
+
+
+/* ===== Contact page ===== */
+.contact-value {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-weight: 700;
+    color: #fff;
+    overflow-wrap: anywhere;
+    display: inline-block;
+    margin-bottom: 14px;
+}
+
+.two-columns {
+    grid-template-columns: 1fr 1fr;
+}
+
+details {
+    padding: 16px 0;
+    border-top: 1px solid #ffffff24;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 600;
+    line-height: 1.7;
+}
+
+details p {
+    margin-top: 14px;
+}
+
