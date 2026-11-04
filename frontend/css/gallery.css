@@ -1,0 +1,167 @@
+/* Gallery Page — Photo Grid, Lightbox Cards & Campus Event Stories */
+.gallery-section {
+  background: #101f39;
+  padding: 64px 7%;
+  scroll-margin-top: 24px;
+}
+
+.gallery-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px 4%;
+  background: #0c1930;
+}
+
+.gallery-page-header .logo {
+  font-size: clamp(.85rem, 2vw, 1.2rem);
+}
+
+.gallery-heading {
+  max-width: 720px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.gallery-heading h2 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  margin: 14px 0;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.gallery-heading p {
+  color: #bccbe0;
+  line-height: 1.7;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.gallery-card {
+  min-width: 0;
+  background: #152b50;
+  border: 1px solid #ffffff18;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.gallery-card a {
+  display: block;
+  overflow: hidden;
+  background: #0c1930;
+}
+
+.gallery-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+}
+
+.gallery-card a:hover {
+  outline: 2px solid #f8c985;
+  outline-offset: -2px;
+}
+
+.gallery-card a:focus-visible {
+  outline: 3px solid #f8c985;
+  outline-offset: -3px;
+}
+
+.gallery-card figcaption {
+  padding: 16px 18px;
+  color: #e0e7f3;
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+.gallery-story {
+  grid-column: 1 / -1;
+  padding: 28px;
+  background: #152b50;
+  border: 1px solid #ffffff18;
+  border-left: 4px solid #f8c985;
+  border-radius: 8px;
+  line-height: 1.9;
+}
+
+.gallery-story:not(:first-child) {
+  margin-top: 24px;
+}
+
+.gallery-story h3 {
+  color: #f8c985;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.gallery-story p {
+  color: #e0e7f3;
+  max-width: 900px;
+  font-size: 1.05rem;
+}
+
+.event-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 32px;
+}
+
+.event-details dt {
+  color: #f8c985;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.event-details dd {
+  color: #e0e7f3;
+}
+
+.event-details > div:last-child {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .event-details {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-story {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 540px) {
+  .gallery-page-header {
+    flex-wrap: wrap;
+  }
+
+  .gallery-page-header .student-login {
+    margin-left: 0;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .gallery-section {
+    padding: 48px 6%;
+  }
+}
+

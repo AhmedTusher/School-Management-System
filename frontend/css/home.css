@@ -1,0 +1,281 @@
+/* Home Page — Hero, Welcome, School Totals, Announcement & Admission Banner */
+.hero {
+  min-height: 100vh;
+  background:
+    linear-gradient(var(--overlay), var(--overlay)),
+    var(--hero-image) center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 32px 6% 52px;
+  width: calc(100% - 280px);
+  align-self: center;
+  transform: translateX(0);
+  transition: transform .4s cubic-bezier(.22, 1, .36, 1);
+}
+
+.content h1 {
+  margin: 18px 0 22px;
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
+.content p {
+  max-width: 1200px;
+  font-size: clamp(.95rem, 1.5vw, 1.35rem);
+  line-height: 1.9;
+  letter-spacing: 1.5px;
+  margin-bottom: 56px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 26px 48px;
+  border: 4px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.15rem;
+  transition: background .25s, color .25s;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #0e1c42;
+}
+
+.content .school-tagline {
+  color: #f8c985;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  letter-spacing: .5px;
+  line-height: 1.5;
+  margin-bottom: 22px;
+}
+
+.content .welcome {
+  max-width: 760px;
+  margin-bottom: 28px;
+  color: #e0e7f3;
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  line-height: 1.8;
+  letter-spacing: .2px;
+}
+
+.admission-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  background: var(--accent);
+  color: #fff;
+  padding: 16px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background .2s;
+}
+
+.admission-btn:hover {
+  background: #bd321d;
+}
+
+.admission-btn:focus-visible,
+.announcement a:focus-visible {
+  outline: 3px solid #f8c985;
+  outline-offset: 5px;
+}
+
+.school-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  width: 100%;
+  max-width: 960px;
+  margin: 44px 0 28px;
+  padding: 26px 0;
+  border-top: 1px solid #ffffff30;
+  border-bottom: 1px solid #ffffff30;
+}
+
+.school-stats > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 12px;
+  border-right: 1px solid #ffffff30;
+}
+
+.school-stats > div:last-child {
+  border-right: 0;
+}
+
+.school-stats dt {
+  color: #cbd7e9;
+  font-size: .8rem;
+  letter-spacing: .6px;
+  order: 2;
+}
+
+.school-stats dd {
+  color: #fff;
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+}
+
+.announcement {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  width: 100%;
+  max-width: 960px;
+  padding: 22px 24px;
+  background: #f5f7fc;
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  color: #142747;
+  text-align: left;
+  scroll-margin-top: 24px;
+}
+
+.notice-tag {
+  flex-shrink: 0;
+  color: #a92d1b;
+  background: #fce5df;
+  border-radius: 4px;
+  padding: 7px 10px;
+  font-size: .7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+}
+
+.announcement h2 {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+
+.content .announcement p {
+  color: #526078;
+  font-size: .85rem;
+  line-height: 1.6;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.announcement a {
+  margin-left: auto;
+  flex-shrink: 0;
+  color: #a92d1b;
+  font-size: .85rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.announcement a:hover {
+  text-decoration: underline;
+}
+
+.admission-section {
+  background: #0c1930;
+  color: #fff;
+  text-align: center;
+  padding: 64px 7%;
+  scroll-margin-top: 20px;
+}
+
+.admission-section .eyebrow {
+  color: #f8c985;
+}
+
+.admission-section h2 {
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  margin: 14px auto 18px;
+  max-width: 700px;
+}
+
+.admission-section p {
+  max-width: 680px;
+  margin: 0 auto;
+  color: #d7e1f1;
+  line-height: 1.8;
+}
+
+/* Home page writing shifts right when the menu is open */
+body.menu-open .content {
+  transform: translateX(140px);
+}
+
+@media (max-width: 1100px) {
+  .announcement {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .announcement > div {
+    flex: 1;
+    min-width: 180px;
+  }
+}
+
+@media (max-width: 800px) {
+  .btn {
+    padding: 18px 30px;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  body.menu-open .content {
+    transform: none;
+  }
+}
+
+@media (max-width: 540px) {
+  .content {
+    padding-top: 20px;
+  }
+
+  .school-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 0;
+    margin-top: 32px;
+  }
+
+  .school-stats > div:nth-child(2) {
+    border-right: 0;
+  }
+
+  .announcement {
+    padding: 20px;
+    align-items: flex-start;
+  }
+
+  .announcement > div {
+    flex-basis: 100%;
+    min-width: 0;
+  }
+
+  .announcement a {
+    margin-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .content {
+    transition: none;
+  }
+}
+
