@@ -1,0 +1,531 @@
+/* ===== Base school page ===== */
+.school-page {
+    background: #0c1930;
+    color: #fff;
+}
+
+.school-page-main {
+    padding: 40px 7% 56px;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.page-intro {
+    margin-bottom: 28px;
+}
+
+.page-intro .eyebrow {
+    color: #f8c985;
+}
+
+.page-intro h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.25;
+    margin-top: 12px;
+    letter-spacing: -0.6px;
+}
+
+.school-page-main p {
+    font-size: 1rem;
+    line-height: 1.85;
+    color: #d7e1f1;
+}
+
+.page-lead {
+    max-width: 760px;
+    margin-bottom: 32px;
+}
+
+.school-page-main h2 {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    margin-bottom: 14px;
+}
+
+.page-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin: 28px 0;
+}
+
+.info-panel {
+    background: #152b50;
+    padding: 28px;
+    border: 1px solid #ffffff24;
+    border-radius: 12px;
+    min-width: 0;
+}
+
+.page-link {
+    display: inline-block;
+    color: #f8c985;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-top: 20px;
+}
+
+.page-link:hover {
+    text-decoration: underline;
+}
+
+
+.page-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: #0c1930;
+    color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.page-cta h2 {
+    margin: 0;
+}
+
+.page-cta .page-link {
+    background: var(--accent);
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin: 0;
+}
+
+
+.two-columns {
+    grid-template-columns: 1fr 1fr;
+}
+
+.school-page-footer {
+    text-align: center;
+    background: #0c1930;
+    color: #aebed5;
+    padding: 24px;
+    font-size: 0.85rem;
+}
+
+.school-page :focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 4px;
+}
+
+@media (max-width: 850px) {
+    .page-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .page-cta {
+        align-items: start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 540px) {
+    .school-page-main {
+        padding: 28px 5% 40px;
+    }
+
+    .info-panel,
+    .notice-empty {
+        padding: 22px;
+    }
+}
+
+/* ===== Color overrides ===== */
+.school-page-main h2 {
+    color: #f8c985;
+}
+
+.page-intro h1 {
+    color: #fff;
+}
+
+.page-cta {
+    background: #152b50;
+    border: 1px solid #ffffff24;
+}
+
+.page-cta .page-link:hover {
+    background: #bd321d;
+}
+
+.school-page-footer {
+    border-top: 1px solid #ffffff24;
+}
+
+.contact-value:hover {
+    color: #f8c985;
+}
+
+.school-page .shared-page-header {
+    background: #0c1930;
+}
+
+
+.about-welcome {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-welcome figure {
+    overflow: hidden;
+    border-radius: 12px;
+    background: #152b50;
+}
+
+.about-welcome img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.about-welcome figcaption {
+    padding: 12px 20px;
+    color: #f8c985;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 850px) {
+    .about-welcome {
+        grid-template-columns: 1fr;
+    }
+    .about-welcome figure {
+        max-width: 650px;
+    }
+}
+
+/* ===== About page: readable introduction and a contrasting highlights section. ===== */
+.about-page .about-welcome {
+    align-items: start;
+}
+
+.about-page .school-page-main p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #e5edf8;
+}
+
+.about-page .about-welcome p+p {
+    margin-top: 18px;
+}
+
+.about-page .about-welcome figcaption {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #e5edf8;
+}
+
+.about-highlights {
+    margin: 36px 0;
+    padding: 32px;
+    background: #f4f6f9;
+    border-radius: 14px;
+    color: #142747;
+}
+
+.about-page .about-highlights h2 {
+    color: #142747;
+}
+
+.about-highlights .page-grid {
+    margin: 24px 0 0;
+    align-items: stretch;
+}
+
+.about-highlights .info-panel {
+    background: #fff;
+    border: 1px solid #dce3eb;
+    padding: 24px;
+}
+
+.about-highlights h3 {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 14px;
+}
+
+.about-page .about-highlights p {
+    color: #40536d;
+    font-size: 1.05rem;
+}
+
+.about-highlights>.page-link {
+    color: #a72c1a;
+}
+
+.about-values {
+    list-style: none;
+    display: grid;
+    gap: 14px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #40536d;
+}
+
+.about-values li {
+    padding-left: 16px;
+    border-left: 3px solid var(--accent);
+}
+
+.about-page .page-cta p {
+    margin-top: 12px;
+    max-width: 650px;
+}
+
+.about-page .page-cta>.page-link {
+    flex-shrink: 0;
+    max-width: 100%;
+}
+
+@media (max-width: 1100px) {
+    .about-highlights .page-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-page .page-cta {
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+@media (max-width: 540px) {
+    .about-highlights {
+        padding: 22px 18px;
+    }
+
+    .about-highlights .info-panel {
+        padding: 20px;
+    }
+
+    .about-page .school-page-main p {
+        font-size: 1.0625rem;
+    }
+
+    .about-page .page-cta {
+        padding: 24px;
+    }
+}
+
+/* ===== School history and leadership messages ===== */
+.school-history {
+    margin-top: 36px;
+    padding: 32px;
+    border: 1px solid #ffffff24;
+    border-radius: 14px;
+    background: #152b50;
+}
+
+.school-history h2 {
+    margin-top: 12px;
+}
+
+.history-milestones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    list-style: none;
+    margin: 24px 0;
+    padding: 24px 0;
+    border-block: 1px solid #ffffff24;
+}
+
+.history-milestones li {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    line-height: 1.7;
+}
+
+.history-milestones strong {
+    color: #f8c985;
+    font-size: 1.3rem;
+}
+
+.history-milestones span {
+    color: #e5edf8;
+}
+
+.leadership-messages {
+    margin-top: 36px;
+}
+
+.leadership-message-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.leadership-message {
+    padding: 28px;
+    background: #f4f6f9;
+    color: #142747;
+    border-radius: 12px;
+    border-top: 4px solid var(--accent);
+}
+
+.leadership-message .eyebrow {
+    color: #a72c1a;
+}
+
+.leadership-message h3 {
+    font-size: 1.35rem;
+    margin: 14px 0 8px;
+    line-height: 1.5;
+}
+
+.about-page .leadership-message p {
+    color: #40536d;
+    font-size: 1.05rem;
+    margin-top: 16px;
+}
+
+.about-page .leadership-message .message-role {
+    margin: 0 0 24px;
+    font-size: 0.9rem;
+    color: #526078;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dce3eb;
+}
+
+@media (max-width: 850px) {
+    .leadership-message-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 540px) {
+
+    .school-history,
+    .leadership-message {
+        padding: 22px;
+    }
+
+    .history-milestones {
+        grid-template-columns: 1fr;
+    }
+}
+
+.leadership-portrait {
+    width: 140px;
+    aspect-ratio: 4 / 5;
+    margin: 0 0 22px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #e7edf4;
+}
+
+.leadership-portrait img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+/* ===== About page: history section (light theme) ===== */
+.about-page .school-history {
+    background: #f4f6f9;
+    color: #142747;
+    padding: 36px;
+    border: 1px solid #dce3eb;
+}
+
+.about-page .school-history h2 {
+    text-align: center;
+    color: #168323;
+    margin: 0 0 28px;
+    font-size: clamp(1.5rem, 2.7vw, 2rem);
+}
+
+.history-layout {
+    display: grid;
+    grid-template-columns: 1.08fr 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.about-page .history-copy p {
+    text-align: center;
+    color: #26364a;
+    font-size: 1.05rem;
+    line-height: 1.9;
+}
+
+.history-copy p+p {
+    margin-top: 18px;
+}
+
+.history-photo {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.history-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 850px) {
+    .history-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 540px) {
+    .about-page .school-history {
+        padding: 24px 18px;
+    }
+
+    .history-layout {
+        gap: 24px;
+    }
+}
+
+/* ===== About page overrides ===== */
+.about-page .about-welcome {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.about-page .about-welcome>div {
+    max-width: 900px;
+}
+
+.about-highlights .page-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 700px) {
+    .about-highlights .page-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== Gallery link ===== */
+.gallery-inline-link {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #e5edf8;
+}
+
+.gallery-inline-link a {
+    color: #f8c985;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.gallery-inline-link a:hover {
+    text-decoration: underline;
+}
+
+.about-page .about-welcome p+p {
+    margin-top: 24px;
+}
