@@ -1,6 +1,6 @@
 # School Management System
 
-A school website for S. M. Pilot Model High School, with a student portal.
+A school website for S. M. Pilot Model School, with a student portal.
 Built as a two-person course project.
 
 > Work in progress: pages are being added branch by branch.
